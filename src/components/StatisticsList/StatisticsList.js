@@ -5,10 +5,11 @@ import { StatisticWrapp, StatisticTopic, List, ListItem } from '../StatisticsLis
 import randomColorRGB from 'random-color-rgb'
 
 
-export const StatisticList = ({ data }) => {
+export const StatisticList = ({ data, title }) => {
+    console.log (title);
     return (
         <StatisticWrapp>
-            <StatisticTopic>Upload stats</StatisticTopic>
+            {title && <StatisticTopic>Upload stats</StatisticTopic>}
             <List>
                 {data.map(data => (
                     <ListItem key={data.id} style={{background:randomColorRGB()}}>
