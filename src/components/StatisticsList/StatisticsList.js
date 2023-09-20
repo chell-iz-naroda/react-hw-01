@@ -6,10 +6,9 @@ import randomColorRGB from 'random-color-rgb'
 
 
 export const StatisticList = ({ data, title }) => {
-    console.log (title);
     return (
         <StatisticWrapp>
-            {title && <StatisticTopic>Upload stats</StatisticTopic>}
+            {title && <StatisticTopic>{title}</StatisticTopic>}
             <List>
                 {data.map(data => (
                     <ListItem key={data.id} style={{background:randomColorRGB()}}>
